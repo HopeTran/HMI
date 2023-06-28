@@ -1,0 +1,8 @@
+{
+    "log_level": "debug",
+    "api_token": "api_token",
+    "port": ":8101",
+    "sendgrid_api_key": "string",
+    "sender_email": "string",
+    "recipient_email": "string"
+}

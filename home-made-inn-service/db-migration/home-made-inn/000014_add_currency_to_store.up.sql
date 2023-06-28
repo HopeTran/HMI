@@ -1,0 +1,1 @@
+alter table store add column if not exists currency text;

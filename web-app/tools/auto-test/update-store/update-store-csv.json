@@ -1,0 +1,318 @@
+{
+  "Name": "update-store-csv",
+  "CreationDate": "2022-12-8",
+  "Commands": [
+    {
+      "Command": "csvReadArray",
+      "Target": "updatestorecsv.csv",
+      "Value": "data",
+      "Description": "convert csv file to Array"
+    },
+    {
+      "Command": "executeScript",
+      "Target": "return ${data.length} -1",
+      "Value": "index",
+      "Description": "get the last index of the array"
+    },
+    {
+      "Command": "executeScript",
+      "Target": "return ${data[${index}]}",
+      "Value": "dataCSV",
+      "Description": "get data at the last index"
+    },
+    {
+      "Command": "open",
+      "Target": "http://localhost:3000/account/store",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"pr_id_3_header_1\"]/span",
+      "Value": "",
+      "Description": "click \"Store information\" header"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"pr_id_3_content_1\"]/div[2]/div/div/div/span",
+      "Value": "",
+      "Description": "click \"pencil icon\" (edit button)"
+    },
+    {
+      "Command": "type",
+      "Target": "name=name",
+      "Value": "${dataCSV[0]}",
+      "Description": "get data from csv file and add to \"Store name\" field"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[2]/input",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[2]/input",
+      "Value": "${dataCSV[1]}",
+      "Description": "get data from csv file and add to \"Store Logo\" field"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[4]/input",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[4]/input",
+      "Value": "${dataCSV[2]}",
+      "Description": "get data from csv file and add to \"Store background\" field"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[5]/div/div/div[2]",
+      "Value": "",
+      "Description": "click \"Categories dropdown\""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[4]/div[2]/ul/li[2]/div/div",
+      "Value": "",
+      "Description": "click \"Healthy\" in Categories"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[4]/div[2]/ul/li[3]/div/div",
+      "Value": "",
+      "Description": "click \"Coffee & Tea\" in Categories"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[4]/div[2]/ul/li[4]/div/div",
+      "Value": "",
+      "Description": "click \"Bakery\" in Categories"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/button",
+      "Value": "",
+      "Description": "click \"Add operation times\""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div/div/div",
+      "Value": "",
+      "Description": "click \"dropdown Operating Time\""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[4]/div/ul/li",
+      "Value": "",
+      "Description": "select Sunday"
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div/div[2]/span/input",
+      "Value": "${dataCSV[3]}",
+      "Description": "get data from csv file and add to \"Open Time\" field"
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div/div[3]/span/input",
+      "Value": "${dataCSV[4]}",
+      "Description": "get data from csv file and add to \"Close Time\" field"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/button",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[2]/div/div",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[4]/div/ul/li[2]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[2]/div[2]/span/input",
+      "Value": "${dataCSV[3]}",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[2]/div[3]/span/input",
+      "Value": "${dataCSV[4]}",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/button",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[3]/div/div",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[4]/div/ul/li[3]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[3]/div[2]/span/input",
+      "Value": "${dataCSV[3]}",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[3]/div[3]/span/input",
+      "Value": "${dataCSV[4]}",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/button",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[4]/div/div",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[4]/div/ul/li[4]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[4]/div[2]/span/input",
+      "Value": "${dataCSV[3]}",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[4]/div[3]/span/input",
+      "Value": "${dataCSV[4]}",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/button",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[5]/div/div",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[4]/div/ul/li[5]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[5]/div[2]/span/input",
+      "Value": "${dataCSV[3]}",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[5]/div[3]/span/input",
+      "Value": "${dataCSV[4]}",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/button",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[6]/div/div",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[4]/div/ul/li[6]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[6]/div[2]/span/input",
+      "Value": "${dataCSV[3]}",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[6]/div[3]/span/input",
+      "Value": "${dataCSV[4]}",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/button",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[7]/div/div",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[4]/div/ul/li[7]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[7]/div[2]/span/input",
+      "Value": "${dataCSV[3]}",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[7]/div/div[7]/div[3]/span/input",
+      "Value": "${dataCSV[4]}",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"edit-store\"]/div[8]/div[3]/button/span",
+      "Value": "",
+      "Description": "click \"Search lat,long\""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"pr_id_33_content\"]/div/div/div/div/img",
+      "Value": "",
+      "Description": "click \"location icon\" "
+    }
+  ]
+}

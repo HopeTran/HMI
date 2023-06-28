@@ -1,0 +1,98 @@
+@import 'variables';
+
+//Background Color
+.clr-red {
+  color: red;
+}
+.clr-white {
+  color: $clr-white; //#ffffff;
+}
+.clr-white-light {
+  color: $clr-white-light; //#ffffff 0.8;
+  opacity: 0.8;
+}
+.clr-everglade-light {
+  color: $clr-everglade-light; //rgba(37, 90, 47, 0.8);
+}
+.clr-mine-shaft {
+  color: $clr-mine-shaft; //#333333;
+}
+.clr-black {
+  color: $clr-black; //#000000;
+}
+.clr-everglade {
+  color: $clr-everglade; //#204227;
+}
+.clr-viridian-green {
+  color: $clr-viridian-green; //#668B6D;
+}
+.clr-dell {
+  color: $clr-dell; //#35580F;
+}
+.clr-olive-drab {
+  color: $clr-olive-drab; //#5A872A;
+}
+.clr-green-house {
+  color: $clr-green-house; //#2C490B;
+}
+.clr-mine-shaft-light {
+  color: $clr-mine-shaft-light; //#333333 0.8
+}
+.clr-viridian-green-light {
+  color: $clr-viridian-green-light; //rgba(102, 139, 109, 0.7)
+}
+.clr-oxford-blue {
+  color: $clr-oxford-blue; //#2D3748
+}
+.clr-green {
+  color: $clr-green; //#689834
+}
+.clr-gray-light {
+  color: $clr-gray-light; //#E3E3E5
+}
+.clr-pine-tree-light {
+  color: $clr-pine-tree-light; //rgba(53, 88, 15, 0.1)
+}
+//background Color
+.bg-white {
+  background-color: $clr-white; //#ffffff;
+}
+.bg-everglade-light {
+  background-color: $clr-everglade-light; //rgba(37, 90, 47, 0.8);
+}
+.bg-mine-shaft {
+  background-color: $clr-mine-shaft; //#333333;
+}
+.bg-black {
+  background-color: $clr-black //#000000;
+}
+.bg-everglade {
+  background-color: $clr-everglade; //#204227;
+}
+.bg-viridian-green {
+  background-color: $clr-viridian-green; //#668B6D;
+}
+.bg-dell {
+  background-color: $clr-dell; //#35580F;
+}
+.bg-olive-drab {
+  background-color: $clr-olive-drab; //#5A872A;
+}
+.bg-green-house {
+  background-color: $clr-green-house; //#2C490B;
+}
+.bg-mine-shaft-light {
+  background-color: $clr-mine-shaft-light; //#333333 0.8
+}
+.bg-viridian-green-light {
+  background-color: $clr-viridian-green-light; //rgba(102, 139, 109, 0.7)
+}
+.bg-pine-tree-light {
+  background-color: $clr-pine-tree-light; //rgba(53, 88, 15, 0.1)
+}
+.bg-clr-alabaster {
+  background-color: $clr-alabaster; //#F9F9F9
+}
+.bg-pink {
+  background-color:  $clr-pink;
+}

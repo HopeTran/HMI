@@ -1,0 +1,1 @@
+create index operation_time_store_idx on operation_time (store_id); 

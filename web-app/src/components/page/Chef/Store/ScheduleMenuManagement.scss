@@ -1,0 +1,81 @@
+@import '../../../../statics/styles/variables';
+
+.schedule-menu-content {
+  .p-inputgroup {
+    .p-inputgroup-addon {
+      min-width: 65px !important;
+    }
+  }
+
+  .p-inputnumber-buttons-horizontal {
+    button {
+      min-width: 30px;
+    }
+  }
+  .schedule-menu {
+    .schedule-item-menu {
+      display: inline-block;
+      width: 150px;
+      border-radius: 4px;
+      text-align: center;
+      &:hover {
+        background-color: $clr-viridian-green-light;
+      }
+    }
+
+    .active {
+      color: $clr-white;
+      background-color: $clr-everglade;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  //Menu store
+  .schedule-menu-content {
+    .schedule-menu {
+      display: flex;
+      align-items: center;
+      overflow-x: scroll;
+      .schedule-item-menu {
+        border-radius: 0;
+        >div {
+          display: flex;
+          width: max-content;
+        }
+      }
+    }
+  }
+  .product-management-list {
+    .p-datatable-tbody {
+      tr {
+        td {
+          // &.action-col {
+          //   .p-button {
+          //     padding: 0 10px;
+          //   }
+          // }
+        }
+      }
+    }
+  }
+  .user-manager {
+    .p-datatable {
+      .p-datatable-tbody {
+        tr {
+          td {
+            border: none;
+            border-bottom: 1px solid #e9ecef;
+            .p-inputgroup {
+              width: auto;
+            }
+            input {
+              max-width: 70px;
+            }
+          }
+        }
+      }
+    }    
+  }
+}

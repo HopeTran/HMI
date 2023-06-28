@@ -1,0 +1,7 @@
+-- ---Create service user-----
+-- create user home_made_inn_service ENCRYPTED PASSWORD '1234567890';
+-- alter role home_made_inn_service ENCRYPTED PASSWORD '1234567890';
+--
+-- ---Create database-----
+-- create database home_made_inn;
+-- alter database home_made_inn owner to home_made_inn_service;

@@ -1,0 +1,224 @@
+@import 'functions';
+
+$margin-sizes: 0, 2, 4, 8, 10, 12, 16, 20, 24, 28, 32, 40;
+@mixin margin-classes($type) {
+  //@for $i from 1 through $sizes {
+  @each $size in $margin-sizes {
+    $size-px: $size * 1px;
+    $size-rem: calculateRem($size-px);
+
+    .m-#{$size}#{$type},
+    .m-#{$size}px#{$type} {
+      margin: $size-px;
+    }
+    .m-#{$size}rem#{$type} {
+      margin: $size-rem;
+    }
+
+    .mx-#{$size}#{$type},
+    .mx-#{$size}px#{$type} {
+      margin-left: $size-px;
+      margin-right: $size-px;
+    }
+    .mx-#{$size}rem#{$type} {
+      margin-left: $size-rem;
+      margin-right: $size-rem;
+    }
+
+    .my-#{$size}#{$type},
+    .my-#{$size}px#{$type} {
+      margin-top: $size-px;
+      margin-bottom: $size-px;
+    }
+    .my-#{$size}rem#{$type} {
+      margin-top: $size-rem;
+      margin-bottom: $size-rem;
+    }
+
+    .mt-#{$size}#{$type},
+    .mt-#{$size}px#{$type} {
+      margin-top: $size-px;
+    }
+    .mt-#{$size}rem#{$type} {
+      margin-top: $size-rem;
+    }
+
+    .mb-#{$size}#{$type},
+    .mb-#{$size}px#{$type} {
+      margin-bottom: $size-px;
+    }
+    .mb-#{$size}rem#{$type} {
+      margin-bottom: $size-rem;
+    }
+
+    .ml-#{$size}#{$type},
+    .ml-#{$size}px#{$type} {
+      margin-left: $size-px;
+    }
+    .ml-#{$size}rem#{$type} {
+      margin-left: $size-rem;
+    }
+
+    .mr-#{$size}#{$type},
+    .mr-#{$size}px#{$type} {
+      margin-right: $size-px;
+    }
+    .mr-#{$size}rem#{$type} {
+      margin-right: $size-rem;
+    }
+  }
+}
+@include margin-classes('');
+
+$padding-sizes: 0, 2, 4, 8, 12, 16, 20, 24, 28, 32, 40, 50;
+@mixin padding-classes($type) {
+  @each $size in $padding-sizes {
+    $size-px: $size * 1px;
+    $size-rem: calculateRem($size-px);
+
+    .p-#{$size}#{$type},
+    .p-#{$size}px#{$type} {
+      padding: $size-px;
+    }
+    .p-#{$size}rem#{$type} {
+      padding: $size-rem;
+    }
+
+    .px-#{$size}#{$type},
+    .px-#{$size}px#{$type} {
+      padding-left: $size-px;
+      padding-right: $size-px;
+    }
+    .px-#{$size}rem#{$type} {
+      padding-left: $size-rem;
+      padding-right: $size-rem;
+    }
+
+    .py-#{$size}#{$type},
+    .py-#{$size}px#{$type} {
+      padding-top: $size-px;
+      padding-bottom: $size-px;
+    }
+    .py-#{$size}rem#{$type} {
+      padding-top: $size-rem;
+      padding-bottom: $size-rem;
+    }
+
+    .pt-#{$size}#{$type},
+    .pt-#{$size}px#{$type} {
+      padding-top: $size-px;
+    }
+    .pt-#{$size}rem#{$type} {
+      padding-top: $size-rem;
+    }
+
+    .pb-#{$size}#{$type},
+    .pb-#{$size}px#{$type} {
+      padding-bottom: $size-px;
+    }
+    .pb-#{$size}rem#{$type} {
+      padding-bottom: $size-rem;
+    }
+
+    .pl-#{$size}#{$type},
+    .pl-#{$size}px#{$type} {
+      padding-left: $size-px;
+    }
+    .pl-#{$size}rem#{$type} {
+      padding-left: $size-rem;
+    }
+
+    .pr-#{$size}#{$type},
+    .pr-#{$size}px#{$type} {
+      padding-right: $size-px;
+    }
+    .pr-#{$size}rem#{$type} {
+      padding-right: $size-rem;
+    }
+  }
+}
+@include padding-classes('');
+
+$font-sizes: 8, 10, 11, 12, 14, 16, 18;
+@mixin font-size-classes($type) {
+  @each $size in $font-sizes {
+    $size-px: $size * 1px;
+    $size-rem: calculateRem($size-px);
+
+    .fs-#{$size}#{$type},
+    .fs-#{$size}px#{$type} {
+      font-size: $size-px;
+    }
+    .fs-#{$size}rem#{$type} {
+      @include fontSize($size * 1px);
+    }
+
+    .fsi-#{$size}#{$type},
+    .fsi-#{$size}px#{$type} {
+      font-size: $size-px !important;
+    }
+    .fsi-#{$size}rem#{$type} {
+      font-size: $size-rem !important;
+    }
+  }
+}
+@include font-size-classes('');
+
+@mixin tab-full-classes($type) {
+  body {
+    .p-tabview {
+      &.npl-tabview {
+        &.tab-full#{$type} {
+          ul.p-tabview-nav {
+            display: flex;
+
+            li {
+              flex: 1 1;
+              border-radius: 4px 4px 0 0;
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include tab-full-classes('');
+
+@include media-breakpoint-in-range('xl') {
+  @include margin-classes('-xl');
+  @include padding-classes('-xl');
+  @include font-size-classes('-xl');
+  @include tab-full-classes('-xl');
+}
+
+@include media-breakpoint-in-range('lg') {
+  @include margin-classes('-lg');
+  @include padding-classes('-lg');
+  @include font-size-classes('-lg');
+  @include tab-full-classes('-lg');
+}
+
+@include media-breakpoint-in-range('md') {
+  @include margin-classes('-md');
+  @include padding-classes('-md');
+  @include font-size-classes('-md');
+  @include tab-full-classes('-md');
+}
+
+@include media-breakpoint-in-range('sm') {
+  @include margin-classes('-sm');
+  @include padding-classes('-sm');
+  @include font-size-classes('-sm');
+  @include tab-full-classes('-sm');
+}
+
+@include media-breakpoint-in-range('xs') {
+  @include margin-classes('-xs');
+  @include padding-classes('-xs');
+  @include font-size-classes('-xs');
+  @include tab-full-classes('-xs');
+}

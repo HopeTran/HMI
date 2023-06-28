@@ -1,0 +1,1 @@
+drop index if exists operation_time_store_idx;

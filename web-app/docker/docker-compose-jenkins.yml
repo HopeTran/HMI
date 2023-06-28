@@ -1,0 +1,13 @@
+version: "3"
+services:
+  home-made-inn-web-app:
+    container_name: home-made-inn-web-app
+    image: docker-reg.narrowpacific.com/home-made-inn-web-app:${TAG}
+    ports:
+      - "8300:80"
+    networks:
+      - narrowpacific
+    restart: always
+networks:
+  narrowpacific:
+    external: true

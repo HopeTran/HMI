@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "home-made-inn-api",
+      "script": "src/server.js",
+      "log_date_format" : "YYYY-MM-DD HH:mm:ss Z",
+      "instances": "1",
+      "env_production": {
+        "NODE_ENV": "production"
+      },
+      "env_development": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}

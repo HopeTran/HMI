@@ -1,0 +1,234 @@
+@import 'variables';
+@import 'mixins';
+
+@font-face {
+  font-family: $primary-font;
+  src: url('./fonts/Poppins/Poppins-Light.ttf');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url('./fonts/Poppins/Poppins-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+} 
+
+@font-face {
+  font-family: $primary-font;
+  src: url('./fonts/Poppins/Poppins-Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url('./fonts/Poppins/Poppins-MediumItalic.ttf');
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url('./fonts/Poppins/Poppins-SemiBold.ttf');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url('./fonts/Poppins//Poppins-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+.huge {
+  font-size: 48px !important;
+  font-weight: 600;
+}
+h1 {
+  font-size: 36px !important;
+  font-weight: 500;
+}
+h2 {
+  font-size: 28px !important;
+  font-weight: 500;
+}
+h3 {
+  font-size: 24px !important;
+}
+h4 {
+  font-size: 20px !important;
+}
+h5 {
+  font-size: 18px !important;
+}
+.text-h5 {
+  font-size: 16px;
+}
+.text-xxxxlarge {
+  font-size: 24px;
+}
+.text-xxxlarge {
+  font-size: 22px;
+}
+.text-xxlarge {
+  font-size: 20px; 
+  font-weight: 500;
+  line-height: 26px;
+}
+.text-xlarge {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.text-xlarge-bold {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.text-large {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.text-large-light {
+  font-size: 16px; 
+  font-weight: 400;
+  line-height: 20px;
+}
+.text-normal {
+  font-size: 14px; //14px
+  font-weight: 400;
+  line-height: 16px;
+}
+.text-small {
+  font-size: 12px; //12px
+  font-weight: 300;
+  line-height: 18px;
+}
+
+//font family
+.font-primary-medium {
+  font-family: $primary-font-medium;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.first-heroText {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 54px;
+  font-style: normal;
+  width: 530px;
+  font-family: $primary-font;
+}
+
+.second-heroText {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  font-family: $primary-font;
+}
+
+//max-width: 1024px
+@media only screen and (max-width: 1024px) {
+  .huge {
+    font-size: 36px !important;
+  }
+  h1 {
+    font-size: 30px !important;
+  }
+  h2 {
+    font-size: 24px !important;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+  h4 {
+    font-size: 18px !important;
+  }
+  h5 {
+    font-size: 16px !important;
+  }
+  .text-xxxxlarge {
+    font-size: $font-size-xxlarge; //20px
+  }
+  .text-xxxlarge {
+    font-size: $font-size-xlarge; //18px
+  }
+  .text-xxlarge {
+    font-size: $font-size-large; //16px
+  }
+  .text-xlarge {
+    font-size: $font-size-medium; //14px
+  }
+  .text-large {
+    font-size: $font-size-large; //16px
+  }
+  .text-large-light {
+    font-size: $font-size-medium; //14px
+  }
+  .first-heroText {
+    font-size: 30px;
+    line-height: 50px;
+    width: 360px;
+  }
+
+  .second-heroText {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+//max-width: 768px
+@media only screen and (max-width: 768px) {
+  .huge {
+    font-size: 34px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 20px !important;
+  }
+  h3 {
+    font-size: 18px !important;
+  }
+  h4 {
+    font-size: 16px !important;
+  }
+  h5 {
+    font-size: 14px !important;
+  }
+}
+
+//max-width: 768px
+@media only screen and (max-width: 575px) {
+  .huge {
+    font-size: 32px !important;
+  }
+  h1 {
+    font-size: 20px !important;
+  }
+  h2 {
+    font-size: 16px !important;
+  }
+  .first-heroText {
+    font-size: 20px;
+    line-height: 28px;
+    width: 340px;
+  }
+
+  .second-heroText {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

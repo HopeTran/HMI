@@ -1,0 +1,262 @@
+{
+  "Name": "sign-up",
+  "CreationDate": "2022-12-8",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "http://localhost:3000/store/register",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "setWindowSize",
+      "Target": "517x758",
+      "Value": "",
+      "Targets": [],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=storeName",
+      "Value": "",
+      "Targets": [
+        "name=storeName",
+        "css=.d-inline-block:nth-child(1) .relative",
+        "xpath=//input[@name='storeName']",
+        "xpath=//form[@id='registration']/div/div/div/div/input",
+        "xpath=//input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=storeName",
+      "Value": "Store Test 1",
+      "Targets": [
+        "name=storeName",
+        "css=.d-inline-block:nth-child(1) .relative",
+        "xpath=//input[@name='storeName']",
+        "xpath=//form[@id='registration']/div/div/div/div/input",
+        "xpath=//input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=storeAddress",
+      "Value": "",
+      "Targets": [
+        "name=storeAddress",
+        "css=.d-inline-block:nth-child(2) .relative",
+        "xpath=//input[@name='storeAddress']",
+        "xpath=//form[@id='registration']/div/div[2]/div/div/input",
+        "xpath=//div[2]/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=storeAddress",
+      "Value": "123 Trần Phú, Quận Hải Châu, Tp. Đà Nẵng",
+      "Targets": [
+        "name=storeAddress",
+        "css=.d-inline-block:nth-child(2) .relative",
+        "xpath=//input[@name='storeAddress']",
+        "xpath=//form[@id='registration']/div/div[2]/div/div/input",
+        "xpath=//div[2]/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=storeFloor",
+      "Value": "",
+      "Targets": [
+        "name=storeFloor",
+        "css=.d-inline-block:nth-child(3) .relative",
+        "xpath=//input[@name='storeFloor']",
+        "xpath=//form[@id='registration']/div/div[3]/div/div/input",
+        "xpath=//div[3]/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=storeFloor",
+      "Value": "2",
+      "Targets": [
+        "name=storeFloor",
+        "css=.d-inline-block:nth-child(3) .relative",
+        "xpath=//input[@name='storeFloor']",
+        "xpath=//form[@id='registration']/div/div[3]/div/div/input",
+        "xpath=//div[3]/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=firstName",
+      "Value": "",
+      "Targets": [
+        "name=firstName",
+        "css=.w-48:nth-child(1) .relative",
+        "xpath=//input[@name='firstName']",
+        "xpath=//form[@id='registration']/div/div[4]/div/div/div/input",
+        "xpath=//div[4]/div/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=firstName",
+      "Value": "Phan ",
+      "Targets": [
+        "name=firstName",
+        "css=.w-48:nth-child(1) .relative",
+        "xpath=//input[@name='firstName']",
+        "xpath=//form[@id='registration']/div/div[4]/div/div/div/input",
+        "xpath=//div[4]/div/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=lastName",
+      "Value": "An",
+      "Targets": [
+        "name=lastName",
+        "css=.w-48:nth-child(2) .relative",
+        "xpath=//input[@name='lastName']",
+        "xpath=//form[@id='registration']/div/div[4]/div[2]/div/div/input",
+        "xpath=//div[4]/div[2]/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=storePhone",
+      "Value": "",
+      "Targets": [
+        "name=storePhone",
+        "css=.d-inline-block:nth-child(5) .relative",
+        "xpath=//input[@name='storePhone']",
+        "xpath=//form[@id='registration']/div/div[5]/div/div/input",
+        "xpath=//div[5]/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=storePhone",
+      "Value": "0912333444",
+      "Targets": [
+        "name=storePhone",
+        "css=.d-inline-block:nth-child(5) .relative",
+        "xpath=//input[@name='storePhone']",
+        "xpath=//form[@id='registration']/div/div[5]/div/div/input",
+        "xpath=//div[5]/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=email",
+      "Value": "",
+      "Targets": [
+        "name=email",
+        "css=.p-inputgroup > .relative:nth-child(2)",
+        "xpath=//input[@name='email']",
+        "xpath=//form[@id='registration']/div/div[6]/div/div/input",
+        "xpath=//div[6]/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=email",
+      "Value": "teststore1@mailinator.com",
+      "Targets": [
+        "name=email",
+        "css=.p-inputgroup > .relative:nth-child(2)",
+        "xpath=//input[@name='email']",
+        "xpath=//form[@id='registration']/div/div[6]/div/div/input",
+        "xpath=//div[6]/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=password",
+      "Value": "",
+      "Targets": [
+        "name=password",
+        "css=.d-inline-block:nth-child(1) input:nth-child(2)",
+        "xpath=//input[@name='password']",
+        "xpath=//form[@id='registration']/div/div[7]/div/div/div/input",
+        "xpath=//div[7]/div/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=password",
+      "Value": "123456",
+      "Targets": [
+        "name=password",
+        "css=.d-inline-block:nth-child(1) input:nth-child(2)",
+        "xpath=//input[@name='password']",
+        "xpath=//form[@id='registration']/div/div[7]/div/div/div/input",
+        "xpath=//div[7]/div/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=passwordConfirm",
+      "Value": "123456",
+      "Targets": [
+        "name=passwordConfirm",
+        "css=.d-inline-block:nth-child(2) input:nth-child(2)",
+        "xpath=//input[@name='passwordConfirm']",
+        "xpath=//form[@id='registration']/div/div[7]/div[2]/div/div/input",
+        "xpath=//div[7]/div[2]/div/div/input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "css=.p-checkbox-box",
+      "Value": "",
+      "Targets": [
+        "css=.p-checkbox-box",
+        "xpath=//div[@id='terms']/label/div/div/div[2]",
+        "xpath=//label/div/div/div[2]"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "css=.p-button-label",
+      "Value": "",
+      "Targets": [
+        "css=.p-button-label",
+        "xpath=//form[@id='registration']/div[4]/button/span",
+        "xpath=//button/span",
+        "xpath=//span[contains(.,'Sign Up')]"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "executeScript",
+      "Target": "window.scrollTo(0,200)",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript",
+      "Target": "window.scrollTo(0,0)",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

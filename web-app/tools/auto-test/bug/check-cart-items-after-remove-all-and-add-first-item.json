@@ -1,0 +1,82 @@
+{
+  "Name": "check-cart-items-after-remove-all-and-add-first-item",
+  "CreationDate": "2022-12-21",
+  "Commands": [
+    {
+      "Command": "comment",
+      "Target": "when cart items==0",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "http://localhost:3000/store-info/84",
+      "Value": "",
+      "Description": "84 is store id "
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"pr_id_3_content_0\"]/div/div/div/div[2]/div[2]/span/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"pr_id_3_content_0\"]/div/div/div/div[2]/div[2]/span/button",
+        "xpath=//button[@type='button']",
+        "xpath=//button",
+        "css=#pr_id_3_content_0 > div > div:nth-child(1) > div > div:nth-child(2) > div.numberOrder > span > button.p-inputnumber-button.p-inputnumber-button-up.p-button.p-button-icon-only.p-component.p-button-secondary"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"pr_id_3_content_0\"]/div/div/div/div[2]/div[2]/span/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"pr_id_3_content_0\"]/div/div/div/div[2]/div[2]/span/button",
+        "xpath=//button[@type='button']",
+        "xpath=//button",
+        "css=#pr_id_3_content_0 > div > div:nth-child(1) > div > div:nth-child(2) > div.numberOrder > span > button.p-inputnumber-button.p-inputnumber-button-up.p-button.p-button-icon-only.p-component.p-button-secondary"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"pr_id_3_content_0\"]/div/div/div/div[2]/div[2]/span/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"pr_id_3_content_0\"]/div/div/div/div[2]/div[2]/span/button",
+        "xpath=//button[@type='button']",
+        "xpath=//button",
+        "css=#pr_id_3_content_0 > div > div:nth-child(1) > div > div:nth-child(2) > div.numberOrder > span > button.p-inputnumber-button.p-inputnumber-button-up.p-button.p-button-icon-only.p-component.p-button-secondary"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"pr_id_3_content_0\"]/div/div/div/div[2]/div[3]/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"pr_id_3_content_0\"]/div/div/div/div[2]/div[3]/span",
+        "xpath=//div[2]/div[3]/span",
+        "css=#pr_id_3_content_0 > div > div:nth-child(1) > div > div:nth-child(2) > div.addToCart.d-flex.flex-grow-1.align-items-center.justify-content-center > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"header\"]/div/div[2]/div/div",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"header\"]/div/div[2]/div/div",
+        "xpath=//div[2]/div/div",
+        "css=#header > div > div.d-flex.gap-xl-4.gap-3.align-items-center > div.cart > div"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "assertValue",
+      "Target": "xpath=//input[@id='numberOrder' and @value='4']",
+      "Value": "4",
+      "Description": "check cart items then detele and add to cart"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+alter table store drop column logo;

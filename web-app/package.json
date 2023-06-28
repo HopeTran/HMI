@@ -1,0 +1,93 @@
+{
+  "name": "hmi-web-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "i18n-gen": "node tools/multi-language/index.js"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.17.1",
+    "@types/react-transition-group": "^4.4.5",
+    "axios": "0.21.2",
+    "bootstrap": "5.1.3",
+    "classnames": "2.3.1",
+    "country-state-city": "3.0.1",
+    "dotenv": "10.0.0",
+    "formik": "2.2.9",
+    "highcharts": "^10.0.0",
+    "highcharts-react-official": "^3.1.0",
+    "lodash": "4.17.21",
+    "mathjs": "10.0.0",
+    "moment": "2.29.4",
+    "node-sass": "6.0.1",
+    "primeicons": "6.0.0",
+    "primereact": "8.7.1",
+    "qs": "6.10.3",
+    "query-string": "7.0.1",
+    "react": "17.0.2",
+    "react-bootstrap": "2.0.3",
+    "react-dom": "17.0.2",
+    "react-flexbox-grid": "2.1.2",
+    "react-google-maps": "^9.4.5",
+    "react-google-places-autocomplete": "^3.4.0",
+    "react-hook-form": "7.17.5",
+    "react-intl": "5.20.6",
+    "react-number-format": "4.7.3",
+    "react-query": "2.26.2",
+    "react-redux": "7.2.8",
+    "react-router-dom": "5.3.3",
+    "react-scripts": "4.0.3",
+    "react-tooltip": "4.2.21",
+    "react-transition-group": "4.4.2",
+    "redux-thunk": "2.4.1",
+    "tailwindcss": "3.0.2",
+    "typescript": "4.1.5",
+    "yup": "0.32.11"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.0",
+    "@types/lodash": "4.14.171",
+    "@types/node": "12.0.0",
+    "@types/qs": "6.9.7",
+    "@types/query-string": "6.3.0",
+    "@types/react": "17.0.52",
+    "@types/react-dom": "17.0.18",
+    "@types/react-redux": "7.1.24",
+    "@types/react-router-dom": "5.3.3",
+    "csv-string": "4.0.1",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "fs-extra": "9.0.1",
+    "postcss": "8.2.13",
+    "postcss-cli": "8.3.1",
+    "prettier": "2.0.5"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 120,
+    "arrowParens": "always"
+  }
+}

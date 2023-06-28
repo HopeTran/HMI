@@ -1,0 +1,1 @@
+alter table public.cart rename to cart_item;

@@ -1,0 +1,7 @@
+# IDEs
+.idea
+
+#Env files
+*.conf
+!*.sample.conf
+

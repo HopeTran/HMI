@@ -1,0 +1,17 @@
+@import '../../statics/styles/variables';
+
+.favorite {
+  background: $clr-white;
+  box-shadow: 0px 4.18618px 8.97038px rgba(254, 114, 76, 0.4);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &.active {
+    background: #fe724c;
+  }
+}

@@ -1,0 +1,27 @@
+@import '../../statics/styles/variables';
+@import '../../statics/styles/mixins';
+
+.number-format-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ced4da;
+  padding: 4px;
+
+  input {
+    outline: none;
+  }
+
+  &.with-currency {
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+
+    input {
+      border: none;
+      outline: none;
+    }
+
+    span {
+      padding-right: 0.429em;
+    }
+  }
+}

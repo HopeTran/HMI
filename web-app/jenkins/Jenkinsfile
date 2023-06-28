@@ -1,0 +1,112 @@
+def COLOR_MAP = ['SUCCESS': 'good', 'FAILURE': 'danger', 'UNSTABLE': 'danger', 'ABORTED': 'danger']
+
+pipeline {
+    agent any
+
+    environment {
+        NPL_REGISTRY_URL = 'https://docker-reg.narrowpacific.com'
+        NPL_REGISTRY_USERNAME = credentials('NPL_REGISTRY_USERNAME')
+        NPL_REGISTRY_PW = credentials('NPL_REGISTRY_PW')
+
+        HMI_WEB_APP_DEVELOPMENT = credentials('HMI_WEB_APP_DEVELOPMENT')
+        HMI_WEB_APP_PRODUCTION = credentials('HMI_WEB_APP_PRODUCTION')
+
+        HMI_SSH_KEY_DEVELOPMENT = credentials('AUTOTRADE_SSH_KEY_DEVELOPMENT')
+        HMI_SSH_KEY_PRODUCTION = credentials('AUTOTRADE_SSH_KEY_PRODUCTION')
+    }
+
+    stages {
+        stage('Use Development Env') {
+            when {
+                branch 'test'
+            }
+            steps {
+                script {
+                    env.BUILD_ENV = 'development'
+                    env.HMI_WEB_APP_ENV_FILE = "${env.HMI_WEB_APP_DEVELOPMENT}"
+                    env.TAG = "${env.BUILD_ENV}"
+                    
+                    env.NPL_URL = '159.65.9.239'
+                    
+                    env.SSH_USERNAME = 'jenkins'
+                    env.SSH_KEY_FILE="${env.HMI_SSH_KEY_DEVELOPMENT}"
+                }
+                echo "BUILD_ENV: $BUILD_ENV"
+                echo "TAG: $TAG"
+            }
+        }
+        stage('Use Live Env') {
+            when {
+                branch 'live'
+            }
+            steps {
+                script {
+                    env.BUILD_ENV = 'production'
+                    env.HMI_WEB_APP_ENV_FILE = "${env.HMI_WEB_APP_PRODUCTION}"
+                    env.TAG = "${env.BUILD_ENV}"
+                    
+                    env.NPL_URL = '146.190.202.12'
+                    
+                    env.SSH_USERNAME = 'deployer'
+                    env.SSH_KEY_FILE="${env.HMI_SSH_KEY_PRODUCTION}"
+                }
+
+                echo "BUILD_ENV: $BUILD_ENV"
+                echo "TAG: $TAG"
+            }
+        }
+        stage('Build') {
+            parallel {
+                stage('HMI App') {
+                    steps {
+                        sh 'chmod +x ./jenkins/scripts/web-app.sh && ./jenkins/scripts/web-app.sh'
+                    }
+                }
+
+            }
+        }
+
+        stage('Push Image To Registry') {
+            steps {
+                withDockerRegistry([credentialsId: 'NPL_REGISTRY_USER', url: "${NPL_REGISTRY_URL}"]) {
+                    sh 'chmod +x ./jenkins/scripts/push-registry.sh && ./jenkins/scripts/push-registry.sh'
+                }
+            }
+        }
+
+        stage('Deploy Dev') {
+            when {
+                branch 'test'
+            }
+
+            steps {
+                sh 'chmod +x ./jenkins/scripts/deploy.sh && ./jenkins/scripts/deploy.sh'
+            }
+        }
+
+        stage('Deploy Live') {
+            when {
+                branch 'live'
+            }
+
+            steps {
+                sh 'chmod +x ./jenkins/scripts/deploy-live.sh && ./jenkins/scripts/deploy-live.sh'
+            }
+        }
+
+        stage('Cleanup') {
+            steps {
+                sh 'chmod +x ./jenkins/scripts/cleanup.sh && ./jenkins/scripts/cleanup.sh'
+                echo 'skip clean atm'
+            }
+        }
+    }
+
+    post {
+        always {
+            slackSend channel: '#jenkins',
+                color: COLOR_MAP[currentBuild.currentResult],
+                message: "`HMI Webapp (${BUILD_ENV})` - *${currentBuild.currentResult}*\n    Job ${JOB_NAME} build ${BUILD_NUMBER}\n    ${BUILD_URL}"
+        }
+    }
+}
